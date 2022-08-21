@@ -11,6 +11,9 @@ const mapBoxAPIKey = process.env.REACT_APP_MAP;
 https://stackoverflow.com/questions/61647949/how-to-resolve-typescript-error-mapbox-gl-react-hooks
 */
 
+//TODO: Find if some api available with precipitation forecast.
+//TODO: Implement feature to show possible rain forecast for area.
+
 function Map() {
   mapboxgl.accessToken = mapBoxAPIKey as string;
   // Default to Berlin lat,lon for now.
