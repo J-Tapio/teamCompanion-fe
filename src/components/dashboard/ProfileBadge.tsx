@@ -40,7 +40,7 @@ export default function ProfileBadge() {
       <Tooltip title="Account">
         <IconButton
           onClick={handleClick}
-          size="small"
+          size="medium"
           aria-controls={open ? 'account-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
