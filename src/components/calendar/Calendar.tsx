@@ -87,10 +87,8 @@ export default function Calendar() {
   }
 
   useEffect(() => {
-    if(formStep === 0) {
-      dispatch(getEvents(teamId as number));
-    }
-  }, [formStep]);
+    dispatch(getEvents(teamId as number));
+  }, []);
 
   //TODO: FullCalendar documentation suggest use of validRange. This way past days are not visible but it would be better to render calendar fully and show maybe eg. past events. Change later the implementation in a way that past events can be seen and possibly new events re-created with future date/time etc.
 

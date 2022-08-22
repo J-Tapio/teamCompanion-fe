@@ -1,6 +1,6 @@
 import mapboxgl from "mapbox-gl";
 import { useRef, useState, useEffect } from 'react';
-// MaterialUi
+// MaterialUI
 import Box from '@mui/material/Box';
 
 //==============================================================================

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-//MaterialUI
+// MaterialUI
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -64,7 +64,8 @@ function ParticipantsAccordion({ participants }: ParticipantAccordionProps) {
 }
 
 //------------------------------------------------------------------------------
-
+// Utility functions when formatting data before submission
+// TODO: Change initial state values to expect right values to begin with. Will get rid of this redundant conversion before actual submission!
 
 const calculateDuration = (duration: string): number => {
   return parseInt(duration.replace(':', '.'));
@@ -74,12 +75,13 @@ const calculateDistance = (distance: string): number => {
   let [km, m] = distance.split('.');
   return parseInt(km) * 1000 + parseInt(m);
 };
+//------------------------------------------------------------------------------
 
 export default function CreatedExercises() {
   const dispatch = useDispatch();
-  const { eventDate, createdProgramExercises, selectedFitnessEvent } =
+  const { eventDate, createdProgramExercises, selectedFitnessEvent, error } =
     useSelector((state: RootState) => state.fitness);
-  const { teamId } = useSelector((state: RootState) => state.team);
+  const { teamId } = useSelector((state: RootState) => state.user);
   const [displayElement, setDisplayElement] = useState(false);
 
   interface IExerciseToSubmit {
@@ -127,6 +129,7 @@ export default function CreatedExercises() {
         }
       });
     }
+    console.log(exercisesToSubmit);
     return exercisesToSubmit;
   };
 
@@ -135,7 +138,7 @@ export default function CreatedExercises() {
       'Authorization'
     ] = `Bearer ${localStorage.getItem('accessToken')}`;
 
-    if (selectedFitnessEvent) {
+    if (selectedFitnessEvent && teamId) {
       // "/activities/team/:teamId/activity/fitness/:activityId
       let response = await axios.post(
         PATH_API.activities.root +

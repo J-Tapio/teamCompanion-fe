@@ -42,10 +42,10 @@ export default function ExerciseParticipantSelector() {
     currentStrengthExercise,
     exerciseCategory,
   } = useSelector((state: RootState) => state.fitness);
-  const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-  const checkedIcon = <CheckBoxIcon fontSize="small" />;
+  //const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+  //const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-  // Participant later grouped by department within Autoselect component
+  // Participant(s) later grouped by department within Autoselect component
   let selectableParticipants: SelectableParticipant[] = [
     { department: 'All participants', participant: 'All participants' },
   ];
@@ -128,6 +128,7 @@ export default function ExerciseParticipantSelector() {
       options={selectableParticipants}
       groupBy={(option) => option.department}
       onChange={handleChange}
+      isOptionEqualToValue={(option, value) => option.participant === value.participant}
       //disableCloseOnSelect
       getOptionLabel={(option) => option.participant}
       sx={{

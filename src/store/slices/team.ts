@@ -30,12 +30,13 @@ export default slice.reducer;
 export const { hasError, setTeam } = slice.actions;
 
 //==============================================================================
+//TODO: Consider invoking this function immediately when user information has been gathered!
+// Currently being invoked within fitness and event creation pages separately - Logic!
 
 export function getTeam(teamId:number) {
   return async () => {
     try {
       const response = await axios.get(PATH_API.team.root + teamId)
-      console.log(response);
       dispatch(setTeam(response.data));
     } catch (error) {
       console.error(error);
