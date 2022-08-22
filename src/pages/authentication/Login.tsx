@@ -11,14 +11,15 @@ import LoginForm from '../../components/authentication/login/LoginForm';
 
 const styles = {
   containerStyle: {
-    width: '100vw',
-    height: '100vh',
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'auto',
+    height: '100vh',
   },
   boxStyle: {
-    width: '70%',
+    width: '60%',
+    margin: 'auto 0',
+    paddingY: '3rem'
   },
 };
 
@@ -27,7 +28,7 @@ const loginImage =
 
 export default function Login() {
   return (
-    <Container sx={styles.containerStyle}>
+    <div style={styles.containerStyle}>
       <Box sx={styles.boxStyle}>
         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <Box component={'img'} src={loginImage} />
@@ -53,6 +54,6 @@ export default function Login() {
         </Alert>
         <LoginForm />
       </Box>
-    </Container>
+    </div>
   );
 }

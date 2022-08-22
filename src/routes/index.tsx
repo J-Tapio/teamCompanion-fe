@@ -36,7 +36,7 @@ import Dashboard from '../pages/dashboard/Dashboard';
 const Loadable = (Component: React.ElementType) => (props: object) => {
   const { pathname } = useLocation();
   const isDashBoard = pathname.includes(PATH_DASHBOARD.root);
-  console.log(pathname);
+  //console.log(pathname);
   if (isDashBoard) {
     return (
       <AuthGuard>
