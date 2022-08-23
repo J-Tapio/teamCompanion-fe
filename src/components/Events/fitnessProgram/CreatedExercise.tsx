@@ -29,7 +29,7 @@ function AssignedParticipants({ participants }: AssignedParticipantProps) {
     <Grid container spacing={2}>
       {participants.map((participant) => (
         <Grid key={participant.userTeamId} item xs={2}>
-          <Chip label={`${participant.firstName} ${participant.lastName}`} sx={{fontWeight: 500, fontSize: '1rem'}} />
+          <Chip label={`${participant.firstName} ${participant.lastName}`} sx={{fontWeight: 500, fontSize: '.9rem'}} />
         </Grid>
       ))}
     </Grid>
@@ -71,10 +71,10 @@ export default function CreatedExercise() {
     <Paper square elevation={1} sx={{ p: 3 }}>
       <Stack spacing={2}>
         <Typography variant="h6">
-          Exercise to save in the program for date: {eventDate}
+          Exercise to save in the program - {eventDate}
         </Typography>
-        <Typography variant="button">
-          Exercise category: {exerciseCategory}
+        <Typography variant="button" sx={{fontSize: '1rem'}}>
+          {exerciseCategory}
         </Typography>
         <Typography variant="button">Equipment: {ex.equipment}</Typography>
         <Typography variant="button">Exercise: {ex.exercise}</Typography>

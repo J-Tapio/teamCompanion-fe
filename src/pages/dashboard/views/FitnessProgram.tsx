@@ -87,7 +87,7 @@ export default function FitnessProgram() {
       const successTimer = setTimeout(() => {
         dispatch(setSubmitSuccessful(false));
         setShowAddMoreInfo(true);
-      }, 3000);
+      }, 2000);
       return () => clearTimeout(successTimer);
     }
   }, [submitSuccessful]);

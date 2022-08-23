@@ -16,6 +16,7 @@ import { getTeam } from '../../../store/slices/team';
 import { resetForm, setSubmitSuccessful } from 'store/slices/events';
 
 //==============================================================================
+
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
   ref,
@@ -48,7 +49,7 @@ export default function EventCreation() {
       const successTimer = setTimeout(() => {
         dispatch(setSubmitSuccessful(false));
         setShowAddMoreInfo(true);
-      }, 3000);
+      }, 2000);
       return () => clearTimeout(successTimer);
     }
   }, [submitSuccessful])
@@ -76,7 +77,7 @@ export default function EventCreation() {
           onClose={handleMoreInfoClose}
         >
           <Alert severity="info">
-            You can add more fitness events if you want to but for demo-purposes, I suggest that you move to creating exercise program.
+            You can add more fitness events if you want to but I suggest that you move to creating exercise program.
           </Alert>
         </Snackbar>
       )}
