@@ -79,7 +79,7 @@ function WeatherWidget() {
                 <Box display="flex" alignItems="center">
                   <Box
                     component="img"
-                    src={`http://openweathermap.org/img/wn/${dayForecast.weather[0].icon}@2x.png`}
+                    src={`https://openweathermap.org/img/wn/${dayForecast.weather[0].icon}@2x.png`}
                   />
                   <Box>
                     <Typography variant="body2" fontWeight={500}>
