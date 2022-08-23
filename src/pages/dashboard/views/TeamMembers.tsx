@@ -40,7 +40,6 @@ function TeamMemberSelection({
     value: ITeamMember | null,
   ) => {
     if (value) {
-      console.log(value);
       setSelectedMember(value);
     }
   };

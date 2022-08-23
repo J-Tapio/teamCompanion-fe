@@ -40,7 +40,6 @@ const slice = createSlice({
       state.columns[columnId].taskIds = currentIds;
     },
     changeColumn(state, action) {
-      console.log(action.payload);
       let {taskId, newColumn, oldColumn, newIndex} = action.payload;
 
       // Remove taskId from old column
@@ -51,8 +50,6 @@ const slice = createSlice({
       // Insert to new column at certain index
       let currentIds = state.columns[newColumn].taskIds;
       let updatedColumnTasks = currentIds.splice(newIndex,0,taskId)
-
-      // How this even works without updating the column taskIds??
       //state.columns[newColumn].taskIds = updatedColumnTasks;
     },
   },
@@ -60,10 +57,3 @@ const slice = createSlice({
 
 export default slice.reducer;
 export const { changeOrder, changeColumn } = slice.actions;
-
-
-/* 
-After drop
-droppableId: "column-2"
-index: 0
-*/

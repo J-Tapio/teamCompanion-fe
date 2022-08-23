@@ -129,7 +129,6 @@ export default function CreatedExercises() {
         }
       });
     }
-    console.log(exercisesToSubmit);
     return exercisesToSubmit;
   };
 

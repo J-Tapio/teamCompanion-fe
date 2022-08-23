@@ -88,8 +88,6 @@ export default function FormDialog({ open, handleClose }: EventSelectionProps) {
       activityEnd: formatISO(endTime),
     };
 
-    console.log(eventData);
-
     const eventParticipantData = Object.values(eventParticipants)
       .flat()
       .map((participant) => {

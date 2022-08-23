@@ -328,7 +328,7 @@ export function addEvent(teamId:number, eventData:IActivityBody, participantData
       // Create event
       const respEvent = await axios.post(PATH_API.activities.root + teamId, eventData);
       const createdEventId = respEvent.data.id;
-      console.log("Created event id", createdEventId);
+      //console.log("Created event id", createdEventId);
       // Add participants
       await axios.post(PATH_API.activities.root + teamId + '/activity/' + createdEventId + '/participants', participantData);
 

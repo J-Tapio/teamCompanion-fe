@@ -98,9 +98,9 @@ export default function Kanban() {
   const handleDragEnd = (result: DropResult) => {
     const {destination, source, draggableId, type} = result;
 
-    console.log(draggableId); //taskid
-    console.log(destination);
-    console.log(source);
+    //console.log(draggableId); //taskid
+    //console.log(destination);
+    //console.log(source);
 
     if(!destination) return;
 
