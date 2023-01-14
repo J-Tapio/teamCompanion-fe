@@ -55,7 +55,7 @@ export default function LogModal() {
             </Link>{' '}
             and then work on training program for your created event.
           </Typography>
-          <Typography variant="h6" pt={5}>
+      {/*     <Typography variant="h6" pt={5}>
             Please read info below!
           </Typography>
           <Typography variant="body1" pt={5} sx={{ fontSize: '1.1rem' }}>
@@ -69,19 +69,19 @@ export default function LogModal() {
           </Typography>
           <Typography variant="body1" pt={5} sx={{ fontSize: '1.1rem' }}>
             Apologies for any inconvenience/confusion about this.
-          </Typography>
+          </Typography> */}
           <Typography variant="h6" pt={5} sx={{ fontSize: '1.3rem'}}>
             What is the goal of this app eventually?
           </Typography>
           <Typography variant="body1" pt={5} sx={{ fontSize: '1.1rem' }}>
-            This one-man project hopefully someday reaches a point where I could provide this app as a tool for divisional teams where budget is already low.
+            This project hopefully someday reaches a point where I could provide this app as a tool for divisional teams where budget is tight and some easy-to-use app could make it easier for team management to handle team events and training.
           </Typography>
           <Typography variant="body1" pt={5} sx={{ fontSize: '1.1rem' }}>
-            Divisional teams rely heavily on using Excel sheets to track team progress and training programs in many ways to this day. Also, other team operations might be handled on email-basis or with some other app. Some teams prefer to stick with Excel but I somehow from my own experience feel like there could be a window of opportunity to show that all of team management related tasks could be handled with an app.
+            Divisional teams still rely heavily on Excel sheets to track team progress and handle training programs in many ways to this day. Also, other team operations might be handled on email-basis or with some other app. Some teams prefer to stick with the use of Excel but I somehow from my own experience feel like there could be a window of opportunity to show that all of team management related tasks could be handled with an app.
           </Typography>
           <Typography variant="body1" pt={5} sx={{ fontSize: '1.1rem' }}>
             With this app, team management could create events, training programs, have messaging between team-members etc. 
-            Team managers could also have Kanban available to carry out effectively team administration duties and plan ahead.
+            Team managers could also have Kanban-like scheduling system available to carry out effectively team administration duties and plan ahead for the future events.
           </Typography>
           <Typography variant="body1" pt={5} sx={{ fontSize: '1.1rem', fontWeight: 500 }}>
             TL;DR In overall, app could possibly provide tools to manage daily operations of a team efficiently.
@@ -104,7 +104,7 @@ export default function LogModal() {
             CHANGELOG
           </Typography>
           <Typography variant="h6" pt={10} textAlign="center">
-            Juha-Tapio Turpeinen - 2022
+            Juha-Tapio Turpeinen - 2023
           </Typography>
         </Stack>
       </DialogContent>
