@@ -5,9 +5,6 @@ import {
 } from 'react-redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import { rootPersistConfig, rootReducer } from './rootReducer';
-
-// ----------------------------------------------------------------------
-
 /* 
 Prefer to use the callback notation for the middleware option in configureStore to access a pre-typed getDefaultMiddleware instead.
 */

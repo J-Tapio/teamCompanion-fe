@@ -13,13 +13,17 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // Redux
 import { RootState, useSelector, useDispatch } from '../../../store';
-import { discardExerciseProgram, hasError, initializeForm, setSubmitSuccessful } from 'store/slices/fitness';
+import {
+  discardExerciseProgram,
+  hasError,
+  initializeForm,
+  setSubmitSuccessful,
+} from 'store/slices/fitness';
 // Types
 import { ITeamMember } from '../../../types/team';
 // API
 import { PATH_API } from 'api';
-
-//==============================================================================
+//============================================================================//
 
 type ParticipantAccordionProps = { participants: ITeamMember[] };
 
@@ -63,7 +67,7 @@ function ParticipantsAccordion({ participants }: ParticipantAccordionProps) {
   );
 }
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 // Utility functions when formatting data before submission
 // TODO: Change initial state values to expect right values to begin with. Will get rid of this redundant conversion before actual submission!
 
@@ -75,7 +79,7 @@ const calculateDistance = (distance: string): number => {
   let [km, m] = distance.split('.');
   return parseInt(km) * 1000 + parseInt(m);
 };
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 export default function CreatedExercises() {
   const dispatch = useDispatch();
@@ -138,7 +142,6 @@ export default function CreatedExercises() {
     ] = `Bearer ${localStorage.getItem('accessToken')}`;
 
     if (selectedFitnessEvent && teamId) {
-      // "/activities/team/:teamId/activity/fitness/:activityId
       let response = await axios.post(
         PATH_API.activities.root +
           `${teamId}` +

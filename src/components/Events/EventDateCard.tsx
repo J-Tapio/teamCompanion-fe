@@ -5,9 +5,13 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import EventNoteTwoToneIcon from '@mui/icons-material/EventNoteTwoTone';
 // Redux
-import { RootState, useDispatch, useSelector } from '../../store'
-import { changeHorizontalStep, setEventDate, setSelectedFitnessEvent } from '../../store/slices/fitness';
-//==============================================================================
+import { RootState, useDispatch, useSelector } from '../../store';
+import {
+  changeHorizontalStep,
+  setEventDate,
+  setSelectedFitnessEvent,
+} from '../../store/slices/fitness';
+//============================================================================//
 
 interface IEventDateCardProps {
   date: string;

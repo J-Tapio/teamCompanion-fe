@@ -1,7 +1,7 @@
 import { SetStateAction, useState, Dispatch, useEffect } from 'react';
 import TeamMemberCard from '../../../components/TeamMembers/TeamMemberCard';
 import TeamMemberCardFocused from '../../../components/TeamMembers/TeamMemberCardFocused';
-//MaterialUi
+// MaterialUi
 import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import PersonIcon from '@mui/icons-material/Person';
@@ -15,14 +15,14 @@ import AthleteMonitoring from '../../../components/TeamMembers/AthleteMonitoring
 import { RootState, useDispatch, useSelector } from '../../../store';
 // Types
 import { ITeamMember } from '../../../types/team';
-//==============================================================================
+//============================================================================//
 /**
- * Rename this component to something else maybe?
- * Add accordions to different team member categories, athletes, trainers, staff
+ * Rename this component to something else?
+ * Add accordions to different team member categories; athletes, trainers, staff
  * Add chart, which shows athlete's training load.
- */
+ * */
 
-
+//----------------------------------------------------------------------------//
 interface TeamMemberSelectionProps {
   allMembers: ITeamMember[];
   selectedMember: ITeamMember | null;
@@ -34,7 +34,6 @@ function TeamMemberSelection({
   selectedMember,
   setSelectedMember,
 }: TeamMemberSelectionProps) {
-
   const handleChange = (
     event: React.SyntheticEvent<Element, Event>,
     value: ITeamMember | null,
@@ -78,18 +77,29 @@ function TeamMemberSelection({
     />
   );
 }
-
+//----------------------------------------------------------------------------//
 
 function TeamMembers() {
   const { teamMembers } = useSelector((state: RootState) => state.team);
   //! Only athletes shown for now.
-  let allMembers:ITeamMember[];
-  if(teamMembers) {
+  let allMembers: ITeamMember[];
+  if (teamMembers) {
     allMembers = Object.values(teamMembers.athletes).flat();
   } else {
-    allMembers = [{userId: 1, userTeamId: 1, firstName: "Example", lastName: "Athlete", teamRole: "Athlete", status: "Active"}]
+    allMembers = [
+      {
+        userId: 1,
+        userTeamId: 1,
+        firstName: 'Example',
+        lastName: 'Athlete',
+        teamRole: 'Athlete',
+        status: 'Active',
+      },
+    ];
   }
-  const [selectedMember, setSelectedMember] = useState<ITeamMember | null>(null);
+  const [selectedMember, setSelectedMember] = useState<ITeamMember | null>(
+    null,
+  );
 
   /* const [selectedMember, setSelectedMember] = useState<ISelectedMember | null>(exampleFocusInfo); */
 

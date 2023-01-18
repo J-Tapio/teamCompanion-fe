@@ -4,8 +4,7 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 // Redux
 import { RootState, useSelector } from '../../../store';
-
-//==============================================================================
+//============================================================================//
 
 function FitnessStepper() {
   const { horizontalStep } = useSelector((state: RootState) => state.fitness);

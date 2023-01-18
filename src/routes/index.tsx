@@ -8,7 +8,7 @@ import AuthGuard from '../guards/AuthGuard';
 // Dashboard layout
 import Dashboard from '../pages/dashboard/Dashboard';
 
-//==============================================================================
+//============================================================================//
 
 /* function Loadable(Component: React.ElementType) {
   const { pathname } = useLocation();
@@ -36,7 +36,6 @@ import Dashboard from '../pages/dashboard/Dashboard';
 const Loadable = (Component: React.ElementType) => (props: object) => {
   const { pathname } = useLocation();
   const isDashBoard = pathname.includes(PATH_DASHBOARD.root);
-  //console.log(pathname);
   if (isDashBoard) {
     return (
       <AuthGuard>
@@ -134,7 +133,7 @@ const Calendar = Loadable(lazy(() => import('../pages/dashboard/views/EventCreat
 const TeamMembers = Loadable(lazy(() => import('../pages/dashboard/views/TeamMembers')));
 
 const FitnessProgram = Loadable(lazy(() => import('../pages/dashboard/views/FitnessProgram')));
-
+//TODO: Rename Memo to Kanban?
 const Memo = Loadable(lazy(() => import('../pages/dashboard/views/Kanban')));
 
 // Other pages

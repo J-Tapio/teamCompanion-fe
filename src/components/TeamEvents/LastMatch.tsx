@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import InformalModal from '../modals/InformalModal';
 
-//==============================================================================
+//============================================================================//
 
 const opticLogo =
   'https://ik.imagekit.io/htg3gsxgz/TEAM-COMPANION/Teams/optic_square.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1658394449036';

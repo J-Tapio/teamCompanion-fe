@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
-//MaterialUI
+// MaterialUI
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
@@ -9,9 +9,9 @@ import Stack from '@mui/material/Stack';
 import { Event } from 'types/events';
 // Redux
 import { RootState, useSelector, useDispatch } from '../../store';
-import {setFormStep, setEventType} from '../../store/slices/events';
+import { setFormStep, setEventType } from '../../store/slices/events';
+//============================================================================//
 
-//==============================================================================
 //Image assets
 const matchImg =
   'https://ik.imagekit.io/htg3gsxgz/TEAM-COMPANION/Icons/match.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658393129808';
@@ -25,11 +25,11 @@ const meetingImg =
   'https://ik.imagekit.io/htg3gsxgz/TEAM-COMPANION/Icons/meeting.png?ik-sdk-version=javascript-1.4.3&updatedAt=1658393098045';
 
 const eventTypes: Event[] = [
-  'Match', 
+  'Match',
   'Training',
   'Fitness',
   'Physiotherapy',
-  'Team Meeting'
+  'Team Meeting',
 ];
 
 const eventImages: string[] = [
@@ -37,17 +37,20 @@ const eventImages: string[] = [
   trainingImg,
   fitnessImg,
   physioImg,
-  meetingImg
-]
-
+  meetingImg,
+];
 
 type EventTypeIconProps = {
   iconImg: string;
-}
+};
 
-function EventTypeIcon({iconImg}:EventTypeIconProps) {
+function EventTypeIcon({ iconImg }: EventTypeIconProps) {
   return (
-    <Box component="img" src={iconImg} sx={{ height: '1.6rem', objectFit: 'cover'}}/>
+    <Box
+      component="img"
+      src={iconImg}
+      sx={{ height: '1.6rem', objectFit: 'cover' }}
+    />
   );
 }
 
@@ -57,13 +60,14 @@ interface IEventTypeButton {
   index: number;
 }
 
-function EventTypeButton({event, index}:IEventTypeButton) {
+function EventTypeButton({ event, index }: IEventTypeButton) {
   const dispatch = useDispatch();
-  const {eventType} = useSelector((state:RootState) => state.events);
-  
+  const { eventType } = useSelector((state: RootState) => state.events);
+
   const [cardHover, setCardHover] = useState(false);
-  const handleSelected = (selected:Event | null) => dispatch(setEventType(selected))
-  const handleCardHover = (cardHover:boolean) => setCardHover(cardHover);
+  const handleSelected = (selected: Event | null) =>
+    dispatch(setEventType(selected));
+  const handleCardHover = (cardHover: boolean) => setCardHover(cardHover);
 
   return (
     <Button
@@ -111,11 +115,11 @@ function EventTypeButton({event, index}:IEventTypeButton) {
   );
 }
 
-
-
 export default function EventType() {
   const dispatch = useDispatch();
-  const {formStep, eventType} = useSelector((state:RootState) => state.events);
+  const { formStep, eventType } = useSelector(
+    (state: RootState) => state.events,
+  );
 
   useEffect(() => {
     // Should be done once for step, even though event type might be changed

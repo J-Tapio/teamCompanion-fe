@@ -6,8 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 // Components
 import ReactApexChart from 'react-apexcharts';
-
-// ----------------------------------------------------------------------
+//============================================================================//
 
 
 function ChartDonut() {

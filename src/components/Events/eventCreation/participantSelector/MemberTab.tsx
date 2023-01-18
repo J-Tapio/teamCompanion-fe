@@ -16,9 +16,7 @@ import { ITeamMember } from '../../../../types/team';
 // Redux
 import { RootState, useDispatch, useSelector } from '../../../../store';
 import { setMembersSelected, selectAllInDepartment, unselectAllInDepartment } from '../../../../store/slices/events';
-
-
-//==============================================================================
+//============================================================================//
 
 interface IAthletesTabProps {
  /*  index: number;

@@ -1,17 +1,11 @@
 import { Dispatch, SetStateAction } from 'react';
+// MaterialUI
 import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
-//==============================================================================
-
-interface IModalProps {
-  open: boolean;
-  setOpen: Dispatch<SetStateAction<boolean>>;
-  textToUse: string;
-}
+//============================================================================//
 
 // Image asset
 const underConstructionImg =
@@ -32,7 +26,13 @@ const modalStyle = {
   },
 };
 
-function InformalModal({open, setOpen, textToUse}:IModalProps) {
+interface IModalProps {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  textToUse: string;
+}
+
+function InformalModal({ open, setOpen, textToUse }: IModalProps) {
   const handleClose = () => setOpen(false);
 
   return (
@@ -52,7 +52,12 @@ function InformalModal({open, setOpen, textToUse}:IModalProps) {
           <Box
             component="img"
             src={underConstructionImg}
-            sx={{ height: '350px', objectFit: 'cover', position: 'relative', left: '1.5rem'}}
+            sx={{
+              height: '350px',
+              objectFit: 'cover',
+              position: 'relative',
+              left: '1.5rem',
+            }}
           />
           <Typography
             id="transition-modal-title"
@@ -63,10 +68,7 @@ function InformalModal({open, setOpen, textToUse}:IModalProps) {
           >
             Work in progress
           </Typography>
-          <Typography
-            id="transition-modal-description"
-            sx={{ mt: 2 }}
-          >
+          <Typography id="transition-modal-description" sx={{ mt: 2 }}>
             {textToUse}
           </Typography>
         </Box>

@@ -34,8 +34,7 @@ import {
 import { ITeamMembers, ITeamMember } from 'types/team';
 // Utils
 import { dbActivityTypeIds, AppEventType } from '../../api/utils';
-
-//==============================================================================
+//============================================================================//
 
 type EventSelectionProps = {
   open: boolean;

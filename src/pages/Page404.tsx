@@ -7,8 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // Route
 import { PATH_DASHBOARD } from '../routes/paths';
-
-//==============================================================================
+//============================================================================//
 
 const containerStyle = {
   width: '100vw',

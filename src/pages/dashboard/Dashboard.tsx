@@ -28,16 +28,15 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import ToolBarMenu from './ToolBarMenu';
 import MessageBadge from 'components/dashboard/MessageBadge';
 import ProfileBadge from '../../components/dashboard/ProfileBadge';
+//============================================================================//
 
-//==============================================================================
-
-// Drawer
+// Drawer width
 const drawerWidth = 200;
 // Team Image
 const opticImage =
   'https://ik.imagekit.io/htg3gsxgz/TEAM-COMPANION/Teams/optic_square.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1658394449036';
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
@@ -67,7 +66,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
   backgroundColor: 'fafafa'
 });
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -78,11 +77,10 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
+//----------------------------------------------------------------------------//
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
-
-//------------------------------------------------------------------------------
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -102,7 +100,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -122,7 +120,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 
-//==============================================================================
+//============================================================================//
 type DashBoardProps = {
   children: JSX.Element | JSX.Element[];
 };

@@ -11,8 +11,7 @@ import {
 } from '../../../store/slices/fitness';
 import { getExToEqId } from '../../../store/slices/fitness';
 import { IEquipmentExercise, IEquipmentWithExercises } from 'types/fitness';
-
-//==============================================================================
+//============================================================================//
 
 export default function EqExSelection() {
   const dispatch = useDispatch();

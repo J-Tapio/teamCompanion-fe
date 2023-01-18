@@ -11,8 +11,7 @@ import {
   editCurrentStrengthExercise,
 } from 'store/slices/fitness';
 import { ITeamMember } from 'types/team';
-
-//==============================================================================
+//============================================================================//
 
 interface SelectableParticipant {
   department:
@@ -50,7 +49,7 @@ export default function ExerciseParticipantSelector() {
     { department: 'All participants', participant: 'All participants' },
   ];
 
-  let allParticipants: any;
+  let allParticipants: any; //TODO: Fix type issue.
 
   if (selectedFitnessEvent) {
     allParticipants = Object.values(selectedFitnessEvent.participants).flat(1);

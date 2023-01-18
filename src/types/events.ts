@@ -1,7 +1,12 @@
 //TODO: Change filename later eg. to 'events.create.ts' when adding more to landing-page of dashboard where created events are shown etc.
-import {ITeamMember, TeamRole} from './team';
+import { ITeamMember, TeamRole } from './team';
 
-export type Event = 'Match' | 'Training' | 'Fitness' | 'Physiotherapy' | 'Team Meeting';
+export type Event =
+  | 'Match'
+  | 'Training'
+  | 'Fitness'
+  | 'Physiotherapy'
+  | 'Team Meeting';
 // Possibly not needed
 type EventDate = Date | null;
 
@@ -27,9 +32,8 @@ export interface ICreatedBy {
   userTeamId: number;
   firstName: string;
   lastName: string;
-  teamRole: TeamRole
+  teamRole: TeamRole;
 }
-
 
 interface ICreatedActivity {
   id: number;
@@ -47,15 +51,13 @@ interface ICreatedActivity {
   opponentLogo?: null | string;
 }
 
-
 interface IEventParticipants {
-  coaches: ITeamMember[],
-  trainers: ITeamMember[],
-  athletes: ITeamMember[],
-  physiotherapists: ITeamMember[],
-  staff: ITeamMember[],
+  coaches: ITeamMember[];
+  trainers: ITeamMember[];
+  athletes: ITeamMember[];
+  physiotherapists: ITeamMember[];
+  staff: ITeamMember[];
 }
-
 
 export interface IEventData {
   activityTypeId: number;
@@ -81,4 +83,3 @@ export default interface IEventState {
   eventDate: Date;
   createdEvents: ICreatedActivity[];
 }
-

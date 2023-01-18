@@ -23,17 +23,14 @@ import {
   TextField,
   IconButton,
   InputAdornment,
-  FormControlLabel,
 } from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
-//Types
+// Types
 // Route
 import { PATH_DASHBOARD } from 'routes/paths';
 // API
 import { PATH_API } from '../../../api';
-
-//==============================================================================
-// Typings for error: https://github.com/axios/axios/issues/3612
+//===========================================================================// Typings for error: https://github.com/axios/axios/issues/3612
 
 interface InitialValues {
   email: string;
@@ -53,7 +50,6 @@ const LoginSchema = Yup.object().shape({
     .required('Email is required'),
   password: Yup.string().required('Password is required'),
 });
-
 
 export default function LoginForm() {
   const navigate = useNavigate();
@@ -94,19 +90,19 @@ export default function LoginForm() {
         ] = `Bearer ${response.data.accessToken}`;
         resetForm();
         navigate(PATH_DASHBOARD.events.root);
-
       } catch (error) {
-        
-        const errors = axios.isAxiosError(error) ? error as AxiosError : error as Error;
+        const errors = axios.isAxiosError(error)
+          ? (error as AxiosError)
+          : (error as Error);
 
         if (errors instanceof AxiosError) {
           setSubmitting(false);
-          if(errors.response) {
-            setErrors({ afterSubmit: errors.response.data.message});
+          if (errors.response) {
+            setErrors({ afterSubmit: errors.response.data.message });
           } else {
             setErrors({ afterSubmit: errors.code });
           }
-        } else if(errors instanceof Error) {
+        } else if (errors instanceof Error) {
           setSubmitting(false);
           setErrors({ afterSubmit: errors.message });
         }

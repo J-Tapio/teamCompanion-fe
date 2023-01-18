@@ -2,8 +2,7 @@ import mapboxgl from "mapbox-gl";
 import { useRef, useState, useEffect } from 'react';
 // MaterialUI
 import Box from '@mui/material/Box';
-
-//==============================================================================
+//============================================================================//
 
 const mapBoxAPIKey = process.env.REACT_APP_MAP;
 
@@ -11,7 +10,7 @@ const mapBoxAPIKey = process.env.REACT_APP_MAP;
 https://stackoverflow.com/questions/61647949/how-to-resolve-typescript-error-mapbox-gl-react-hooks
 */
 
-//TODO: Find if some api available with precipitation forecast.
+//TODO: Find if some API available with precipitation forecast.
 //TODO: Implement feature to show possible rain forecast for area.
 
 function Map() {

@@ -1,17 +1,16 @@
-import { useState, useContext } from 'react';
-//MaterialUI
+import { useState } from 'react';
+// MaterialUI
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-//Assets
+// Assets
 import matchImg from '../../assets/illustrations/pages/dashboard/events/match.png';
 import fitnessImg from '../../assets/illustrations/pages/dashboard/events/dumbbell.png';
 // Redux
-import {RootState, useDispatch,useSelector} from '../../store';
+import { RootState, useDispatch, useSelector } from '../../store';
 import { setExerciseCategory } from 'store/slices/fitness';
-
-//==============================================================================
+//============================================================================//
 
 type ExerciseTypeIconProps = {
   iconImg: string;
@@ -27,7 +26,7 @@ function EventTypeIcon({ iconImg }: ExerciseTypeIconProps) {
   );
 }
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 const eventImages: string[] = [matchImg, fitnessImg];
 
@@ -38,12 +37,9 @@ interface IEventTypeButton {
   index: number;
 }
 
-function EventTypeButton({
-  event,
-  index,
-}: IEventTypeButton) {
+function EventTypeButton({ event, index }: IEventTypeButton) {
   const dispatch = useDispatch();
-  const {exerciseCategory} = useSelector((state: RootState) => state.fitness);
+  const { exerciseCategory } = useSelector((state: RootState) => state.fitness);
   const [cardHover, setCardHover] = useState(false);
   const handleSelected = (selected: ExerciseTypes) => {
     dispatch(setExerciseCategory(selected));
@@ -94,22 +90,15 @@ function EventTypeButton({
     </Button>
   );
 }
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 const exerciseTypes: ExerciseTypes[] = ['Cardio', 'Strength'];
 
 function TrainingType() {
   return (
-    <Stack
-      direction='row'
-      spacing={4}
-    >
+    <Stack direction="row" spacing={4}>
       {exerciseTypes.map((event, index) => (
-        <EventTypeButton
-          key={event}
-          event={event}
-          index={index}
-        />
+        <EventTypeButton key={event} event={event} index={index} />
       ))}
     </Stack>
   );

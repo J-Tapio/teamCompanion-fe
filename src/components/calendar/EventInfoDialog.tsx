@@ -17,8 +17,7 @@ import {
   ICreatedEventParticipants,
 } from 'store/slices/events';
 import { ITeamMember } from 'types/team';
-
-//==============================================================================
+//============================================================================//
 
 interface EventInfoDialogProps {
   eventInfoOpen: boolean;

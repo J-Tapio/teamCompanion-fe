@@ -6,7 +6,6 @@ import eventsReducer from './slices/events';
 import userReducer from './slices/user';
 import teamReducer from './slices/team';
 import memoReducer from './slices/memo';
-//==============================================================================
 
 const rootPersistConfig = {
   key: 'root',

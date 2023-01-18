@@ -5,8 +5,7 @@ import Stack from '@mui/material/Stack';
 // Components
 import ReactApexChart from 'react-apexcharts';
 import { access } from 'fs';
-
-//==============================================================================
+//============================================================================//
 
 function ChartLine() {
   const auValues = [1400, 1500, 1600, 1600, 1800, 1900, 2000, 2100, 2100, 2300];

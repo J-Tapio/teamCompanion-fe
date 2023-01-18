@@ -14,8 +14,7 @@ import ParticipantSelector from '../../../components/Events/ParticipantSelector'
 import { RootState, useSelector, useDispatch } from '../../../store';
 import { getTeam } from '../../../store/slices/team';
 import { resetForm, setSubmitSuccessful } from 'store/slices/events';
-
-//==============================================================================
+//============================================================================//
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
@@ -24,11 +23,11 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 export default function EventCreation() {
   const dispatch = useDispatch();
-  const {error, teamMembers} = useSelector((state: RootState) => state.team);
+  const { error, teamMembers } = useSelector((state: RootState) => state.team);
   const { userTeamId } = useSelector((state: RootState) => state.user);
   const { submitSuccessful } = useSelector((state: RootState) => state.events);
   const [showAddMoreInfo, setShowAddMoreInfo] = useState<boolean>(false);
@@ -38,7 +37,7 @@ export default function EventCreation() {
   };
 
   useEffect(() => {
-    if(userTeamId && !teamMembers && !submitSuccessful) {
+    if (userTeamId && !teamMembers && !submitSuccessful) {
       dispatch(getTeam(userTeamId));
     }
     if (submitSuccessful) {
@@ -52,7 +51,7 @@ export default function EventCreation() {
       }, 2000);
       return () => clearTimeout(successTimer);
     }
-  }, [submitSuccessful])
+  }, [submitSuccessful]);
 
   return (
     <Grid item xs={12}>
@@ -77,7 +76,8 @@ export default function EventCreation() {
           onClose={handleMoreInfoClose}
         >
           <Alert severity="info">
-            You can add more fitness events if you want to but I suggest that you move to creating exercise program.
+            You can add more fitness events if you want to but I suggest that
+            you move to creating exercise program.
           </Alert>
         </Snackbar>
       )}

@@ -7,8 +7,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 // Components
 import InformalModal from '../modals/InformalModal';
-
-//==============================================================================
+//============================================================================//
 
 const upcomingOpponents = [
   'New York Subliners',

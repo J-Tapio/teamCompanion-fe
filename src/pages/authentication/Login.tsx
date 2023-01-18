@@ -5,8 +5,7 @@ import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
 // Components
 import LoginForm from '../../components/authentication/login/LoginForm';
-
-//==============================================================================
+//============================================================================//
 
 const styles = {
   containerStyle: {
@@ -18,7 +17,7 @@ const styles = {
   boxStyle: {
     width: '60%',
     margin: 'auto 0',
-    paddingY: '3rem'
+    paddingY: '3rem',
   },
 };
 

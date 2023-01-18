@@ -21,8 +21,7 @@ import {
   setCardioEquipment,
   setSubmitSuccessful,
 } from '../../../store/slices/fitness';
-
-//==============================================================================
+//============================================================================//
 
 type DesignAreaProps = {
   children: JSX.Element | JSX.Element[];
@@ -52,7 +51,7 @@ function DesignArea({ children }: DesignAreaProps) {
   );
 }
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
@@ -61,7 +60,8 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
+
 export default function FitnessProgram() {
   const dispatch = useDispatch();
   const { teamId } = useSelector((state: RootState) => state.user);

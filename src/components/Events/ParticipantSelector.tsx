@@ -14,7 +14,7 @@ import { RootState, useSelector, useDispatch } from '../../store';
 import TabPanel from './eventCreation/participantSelector/TabPanel';
 import MemberTab from './eventCreation/participantSelector/MemberTab';
 
-//==============================================================================
+//============================================================================//
 
 function a11yProps(index: number) {
   return {
@@ -23,7 +23,7 @@ function a11yProps(index: number) {
   };
 }
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 interface ITabsProps {
   value: number;

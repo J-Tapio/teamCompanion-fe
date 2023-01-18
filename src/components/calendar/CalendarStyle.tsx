@@ -1,12 +1,9 @@
 import { styled, alpha } from '@material-ui/core/styles';
 
-// ----------------------------------------------------------------------
-
 const CalendarStyle = styled('div')(({ theme }) => ({
   width: 'calc(100% + 2px)',
   marginLeft: -1,
   marginBottom: -1,
-
 
   // Toolbar buttons
   '& .fc .fc-toolbar-chunk': {
@@ -82,12 +79,11 @@ const CalendarStyle = styled('div')(({ theme }) => ({
     '--fc-highlight-color': alpha(theme.palette.primary.main, 0.08),
   },
 
-
   '& .fc .fc-license-message': { display: 'none' },
   '& .fc a': { color: theme.palette.text.primary },
 
   // Table Head
-/*   '& .fc .fc-col-header ': {
+  /*   '& .fc .fc-col-header ': {
     boxShadow: `inset 0 -1px 0 ${theme.palette.divider}`,
     '& th': { borderColor: 'transparent' },
     '& .fc-col-header-cell-cushion': {
@@ -97,7 +93,7 @@ const CalendarStyle = styled('div')(({ theme }) => ({
   }, */
 
   // Event
- /*  '& .fc .fc-event': {
+  /*  '& .fc .fc-event': {
     borderColor: 'transparent',
     backgroundColor: 'transparent',
   },

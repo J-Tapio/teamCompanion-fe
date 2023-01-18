@@ -1,11 +1,13 @@
-//MaterialUI
+// MaterialUI
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 // Redux
 import { RootState, useDispatch, useSelector } from '../../../store';
-import { editCurrentStrengthExercise, editCurrentCardioExercise } from '../../../store/slices/fitness';
-
-//==============================================================================
+import {
+  editCurrentStrengthExercise,
+  editCurrentCardioExercise,
+} from '../../../store/slices/fitness';
+//============================================================================//
 
 let repetitionSelectables: string[] = [];
 let weightSelectables: string[] = [];
@@ -71,7 +73,7 @@ const labelText = {
   sets: 'Select how many sets to do the exercise',
 };
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 export default function AmountSelect({ scale }: IAmountProps) {
   const { currentStrengthExercise, currentCardioExercise } = useSelector(

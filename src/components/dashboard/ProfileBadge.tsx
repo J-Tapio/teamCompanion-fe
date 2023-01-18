@@ -13,9 +13,7 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 // Paths
 import { PATH_AUTH } from 'routes/paths';
-
-//==============================================================================
-// Currently just Logout is functional and will remove all saved information.
+//============================================================================//
 
 export default function ProfileBadge() {
     const navigate = useNavigate();

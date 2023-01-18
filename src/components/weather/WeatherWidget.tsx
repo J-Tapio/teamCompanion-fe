@@ -1,21 +1,19 @@
 import { useState, useEffect } from 'react';
 import { WeatherApiResult } from '../../types/weather';
 import { format } from 'date-fns';
-// materialUI
+// MaterialUI
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-
 // Map
 import Map from '../map/Map';
-
-//==============================================================================
+//============================================================================//
 /* 
   Default to demo-team location, Berlin - DE, for the moment.
-  */
-  //TODO: Remember to change, now hard-coded, location and country to be dynamically adjusted according to team location.
+*/
+//TODO: Remember to change, now hard-coded, location and country to be dynamically adjusted according to team location and/or upcoming match location.
 
 function WeatherWidget() {
   const [weatherForecast, setWeatherForecast] = useState<WeatherApiResult | null | undefined>(null);

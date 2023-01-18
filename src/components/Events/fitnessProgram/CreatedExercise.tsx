@@ -18,7 +18,7 @@ import {
 // Types
 import { ITeamMember } from '../../../types/team';
 
-//==============================================================================
+//============================================================================//
 
 type AssignedParticipantProps = {
   participants: ITeamMember[];
@@ -29,13 +29,16 @@ function AssignedParticipants({ participants }: AssignedParticipantProps) {
     <Grid container spacing={2}>
       {participants.map((participant) => (
         <Grid key={participant.userTeamId} item xs={2}>
-          <Chip label={`${participant.firstName} ${participant.lastName}`} sx={{fontWeight: 500, fontSize: '.9rem'}} />
+          <Chip
+            label={`${participant.firstName} ${participant.lastName}`}
+            sx={{ fontWeight: 500, fontSize: '.9rem' }}
+          />
         </Grid>
       ))}
     </Grid>
   );
 }
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 export default function CreatedExercise() {
   const dispatch = useDispatch();
@@ -51,9 +54,7 @@ export default function CreatedExercise() {
       dispatch(addToExerciseProgram(currentCardioExercise));
     }
     if (exerciseCategory === 'Strength' && currentStrengthExercise) {
-      dispatch(
-        addToExerciseProgram(currentStrengthExercise),
-      );
+      dispatch(addToExerciseProgram(currentStrengthExercise));
     }
     dispatch(resetExerciseForm());
   };
@@ -73,7 +74,7 @@ export default function CreatedExercise() {
         <Typography variant="h6">
           Exercise to save in the program - {eventDate}
         </Typography>
-        <Typography variant="button" sx={{fontSize: '1rem'}}>
+        <Typography variant="button" sx={{ fontSize: '1rem' }}>
           {exerciseCategory}
         </Typography>
         <Typography variant="button">Equipment: {ex.equipment}</Typography>
@@ -103,7 +104,7 @@ export default function CreatedExercise() {
             <AssignedParticipants participants={ex.participants} />
           </>
         )}
-        <Box sx={{paddingTop: '2rem'}}>
+        <Box sx={{ paddingTop: '2rem' }}>
           <Button
             onClick={handleSave}
             sx={{

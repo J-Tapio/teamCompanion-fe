@@ -26,7 +26,7 @@ import {
   setInputInvalid,
 } from '../../../store/slices/fitness';
 
-//==============================================================================
+//============================================================================//
 
 interface IStepElements {
   label: string;
@@ -100,7 +100,7 @@ const participantExStep: IStepElements[] = [
   },
 ];
 
-//------------------------------------------------------------------------------
+//----------------------------------------------------------------------------//
 
 export default function ExerciseCreation() {
   const dispatch = useDispatch();
@@ -128,7 +128,7 @@ export default function ExerciseCreation() {
   useEffect(() => {
     dispatch(validateFormInput());
 
-    if(formStep === 0 && !exerciseCategory) {
+    if (formStep === 0 && !exerciseCategory) {
       // When form reset, set stepElements to initial step.
       setStepElements(currentSteps);
     }

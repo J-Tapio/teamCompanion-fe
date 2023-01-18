@@ -1,17 +1,17 @@
-import React, {useState, useEffect, Dispatch} from 'react';
+import React, {useState, Dispatch} from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import { deepOrange } from '@mui/material/colors';
-
+/ /Types
 import {ITeamMember} from '../../types/team';
-//Redux
+// Redux
 import { RootState, useSelector, useDispatch } from '../../store';
 import { setMembersSelected, addSelectedMember, removeSelectedMember, unselectAllInDepartment } from '../../store/slices/events';
 
-//==============================================================================
+//============================================================================//
 
 interface IProps {
   teamMember: ITeamMember;

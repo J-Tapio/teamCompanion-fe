@@ -2,8 +2,7 @@ import { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useJwt } from 'react-jwt';
 import { PATH_AUTH } from '../routes/paths';
-
-//==============================================================================
+//============================================================================//
 //TODO: Add implementation where, eg. requesting some route leads to login due to missing authentication but after login takes back to route where user tried to make the request previously.
 //TODO: Add later axios fetch for new tokens with refresh-token.
 
