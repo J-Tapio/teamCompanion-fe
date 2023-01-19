@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import { deepOrange } from '@mui/material/colors';
-/ /Types
+// Types
 import {ITeamMember} from '../../types/team';
 // Redux
 import { RootState, useSelector, useDispatch } from '../../store';
